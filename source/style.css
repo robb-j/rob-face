@@ -16,3 +16,6 @@ select[disabled] {
 	cursor: not-allowed;
 	opacity: 0.5;
 }
+input[type="range"] {
+	min-width: 250px;
+}
