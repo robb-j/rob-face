@@ -19,3 +19,6 @@ select[disabled] {
 input[type="range"] {
 	min-width: 250px;
 }
+input[type="color"] {
+	border-radius: 0;
+}
