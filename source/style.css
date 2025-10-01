@@ -1,0 +1,17 @@
+:root {
+	--font-main: Rubik, Inter, system-ui, sans-serif;
+}
+rob-time {
+	display: inline-block;
+	border: var(--s-2) solid black;
+	border-radius: var(--s-2);
+	overflow: hidden;
+}
+canvas {
+	image-rendering: pixelated;
+	image-rendering: crisp-edges;
+}
+select[disabled] {
+	cursor: not-allowed;
+	opacity: 0.5;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>rob-time</title>
+		<link rel="stylesheet" href="https://alembic.openlab.dev/labcoat.css" />
+		<link rel="stylesheet" href="https://fonts.openlab.dev/inter/inter.css" />
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<main>
+			<center-layout>
+				<div class="flow">
+					<h1>rob-time</h1>
+
+					<p>My experimental watch face</p>
+
+					<cluster-layout>
+						<div class="flow">
+							<rob-time id="clock"></rob-time>
+						</div>
+						<div class="flow">
+							<label class="checkbox" for="override">
+								<input type="checkbox" id="override" name="override" />
+								<span>Override date</span>
+							</label>
+							<label for="hours" class="field">
+								<span class="field-label">Hours</span>
+								<input
+									type="range"
+									min="0"
+									max="24"
+									id="hours"
+									name="hours"
+									disabled
+								/>
+							</label>
+							<label for="minutes" class="field">
+								<span class="field-label">Minutes</span>
+								<input
+									type="range"
+									min="0"
+									max="60"
+									id="minutes"
+									name="minutes"
+									disabled
+								/>
+							</label>
+							<label for="seconds" class="field">
+								<span class="field-label">Seconds</span>
+								<input
+									type="range"
+									min="0"
+									max="60"
+									id="seconds"
+									name="seconds"
+									disabled
+								/>
+							</label>
+							<label class="field" for="speed">
+								<span class="field-label">Speed</span>
+								<select id="speed" name="speed" disabled>
+									<option value="0">0</option>
+									<option value="1">1x</option>
+									<option value="2">2x</option>
+									<option value="5">5x</option>
+									<option value="10">10x</option>
+									<option value="100">100x</option>
+									<option value="1000">1000x</option>
+								</select>
+							</label>
+						</div>
+					</cluster-layout>
+
+					<details open>
+						<summary>Debug</summary>
+						<pre id="debug"></pre>
+					</details>
+				</div>
+			</center-layout>
+		</main>
+
+		<footer>
+			<p>Made by <a href="https://www.r0b.io">Rob</a></p>
+		</footer>
+
+		<script
+			type="module"
+			src="https://alembic.openlab.dev/everything.js"
+		></script>
+		<script type="module" src="app.js"></script>
+	</body>
+</html>
